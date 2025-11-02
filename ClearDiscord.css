@@ -1,378 +1,24 @@
 /**
- * @name Material Discord
- * @version 3.0.5
- * @description A theme based on Google's Material Design
- * @author CapnKitten
- *
- * @website http://github.com/CapnKitten
- * @source https://github.com/CapnKitten/BetterDiscord/blob/master/Themes/Material-Discord/css/source.css
- * @donate https://paypal.me/capnkitten
- * @invite jzJkA6Z and https://discord.gg/vencord
- */
-
-@import url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/css/source.css);
-
-/* Material You addon */
-@import url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/css/addons/material-you/source.css);
-@import url("https://ukriu.github.io/cssCord/Other/noDistractions.css");
-@import url("https://nspc911.github.io/themes/vencord/RefreshedSeamlessChatBar.theme.css");
+ * @name midnight (catppuccin mocha)
+ * @description a dark, customizable discord theme. based on catppuccin mocha theme (https://catppuccin.com).
+ * @author refact0r
+ * @version 2.1.1
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/midnight-discord
+ * @source https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-catppuccin-mocha.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+*/
+/* modify version of the original */
 
 
-/*moves vc hang status to the left*/
-[class*=iconGroup]:has([class*=hangStatusIcon], [d*='M13 3a1'], [class*=gameIcon]) {
-  display: flex;
-  position: absolute;
-  right: 101%;
-}
-
-[class^=botTagCompact], /* reorder tegs in replies */
-[class^=repliedTextPreview], /* reorder message in replies */
-[class^=repliedTextContentTrailingIcon] /* reorder icon that can come after the message in replies */
-{
-    order: 1 !important; /* default order is 0 so putting it to 1 put it after */
-}
-[class^=tooltip] /* Allow the server tooltip to fit the entire server name in one line */ {
-    max-width: unset !important; /* allow it to be larger */ }
-
-:root {
-    /* change padding of the bar */
-    --rscb-chat-box-padding: 8px; /* default is 8px for alignment */
-    /* Whether you want the chat to not move up *\
-    \*    and down when someone starts typing   */
-    --rscb-no-jump-chat: 0;
-     /* Whether you want the messages to clip through *\
-     \*  the gap between slowmode and typing people   */
-     --rscb-clip-chat-through-typing-bar: 0;
-}
-
-.nameTag__37e49 {
-  display: none;
-}
-
-[class*="panels"] [class*="avatarWrapper"] {
-  min-width: unset;
-}
-
-.container__37e49 {
-  gap: var(--space-4) !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-[class*="avatarWrapper__"] {
-  border-radius: 100% !important;
-  width: min-content;
- 
- &:hover {
-    background-color: transparent !important;
- }
- 
- & > .avatar__37e49 {
-    width: 30px !important;
-    height: 40px;
-    margin-top: -1px;
-
-    & > svg {
-      width: 39px !important;
-    }  
-  }
-}
-
-.avatarDecoration__44b0c{
-  margin-left: 1.8px; 
-}
-
-.visual-refresh div[class^="sidebar_"] section[class^="panels_"] {
-    width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) + 1px);
-    left: var(--custom-guild-list-width);
-    bottom: 0px;
-    border-radius: 0px;
-    border: none;
-}
-
-.visual-refresh nav[class*=guilds_] {
-  margin-bottom: unset;
-}
-
-.avatarPopover__2d0ab, .statusPopover__2d0ab, .activityPopover__2d0ab{display:none;}
+/* import theme modules */
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+@import url("https://raw.githubusercontent.com/CeaAPI/vencord-snippets/main/CompactSidebarButtons/CompactSidebarButtons.css");
+@import url("https://raw.githubusercontent.com/yiruzu/vencord-snippets/refs/heads/main/snippets/BubbleUsernames/import.css");
 
 
-:root {
-  --codeblock-height: 200px;
-}
-.codeContainer__75297 > code {
-  max-height: var(--codeblock-height);
-  overflow-y: scroll;
-  &::-webkit-scrollbar {
-    height: 8px;
-    width: 8px;
-  }
-  &::-webkit-scrollbar-corner {
-    background-color: transparent;
-  }
-    &::-webkit-scrollbar-track, &::-webkit-scrollbar-thumb {
-    /* visibility: hidden; */
-  }
-  &::-webkit-scrollbar-thumb {
-    background-clip: padding-box;
-    background-color: var(--scrollbar-thin-thumb);
-    border: 2px solid transparent;
-    border-radius: 4px;
-    min-height: 40px;
-  }
-  &:hover::-webkit-scrollbar-track, &:hover::-webkit-scrollbar-thumb {
-    visibility: visible;
-  }
-  &::-webkit-scrollbar-track {
-    background-color: var(--scrollbar-thin-track);
-    border: 2px solid var(--scrollbar-thin-track);
-    border-color: var(--scrollbar-thin-track);
-  }
-}
-.title_c38106 {
-  display: none;
-}
 
-.title_f75fb0 {
-  padding: 0px !important;
-  /* scale: 0.9; */
-  padding-left: 12px !important;
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  background: transparent !important;
-  height: var(--custom-app-top-bar-height) !important;
-  min-height: 0px;
-  border: none !important;
-  width: calc(100vw);
-}
-
-.followButton_f75fb0,
-.topicClickTarget__6ec1a {
-  -webkit-app-region: no-drag !important;
-}
-
-.base_c48ade:has(.bar_c38106[data-windows="true"]) .title_f75fb0 {
-  width: calc(100vw - 240px)!important;
-}
-
-.children__9293f::after {
-  background: linear-gradient(to right, transparent 0, var(--bg-base-tertiary) 100%)!important;
-}
-.topic__6ec1a {
-  flex: none;
-}
-.member__5d473 {
-    height: 32px!important;
-    padding: var(--space-xxs) var(--space-xs);
-    margin: calc(var(--space-xxs) / 2) var(--space-xxs);
-        &:hover {
-        background: var(--bg-overlay-hover, var(--background-modifier-hover));
-    }
-}
-
-.memberInner__5d473, .childContainer__91a9d {
-    padding: 0px!important;
-    display: flex!important;
-    align-items: center!important;
-    align-content: center!important;
-    max-width: 100%;
-}
-
-.avatar__91a9d {
-    scale: 0.75;
-    margin-right: 4px;
-}
-
-.content__91a9d {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    gap: 8px;
-}
-
-.memberInner__5d473 {
-    position: absolute;
-    top: calc(0px - var(--space-xxs) / 3);
-    left: var(--space-xxs);
-    max-width: calc(100% - var(--space-sm));
-
-}
-
-.membersGroup_c8ffbb {
-    padding: var(--space-xs) var(--space-xxs) var(--space-xs) var(--space-sm)!important;
-}
-
-/* reduce context menu padding */
-.layer_da8173 > .menu_c1e9c4 > .scroller_c1e9c4 {
-    margin: -4px;
-    .separator_c1e9c4 {
-        margin: 1px 8px !important;
-    }
-    .wrapper_f563df {
-        padding: 2px !important;
-    }
-    .item_c1e9c4{
-        /* min-height is 32px as default, change value for desired look */
-        min-height: 32;
-        /* padding is 4px 8px as default, change value for desired look */
-        padding: 4px 8px;
-    }
-}
-
-[data-list-item-id*="message"],
-[class*="messageListItem"],
-[id*="message-"],
-li[class*="messageListItem"] {
-    position: relative;
-    border-radius: var(--wave-border-radius);
-    transition: all 0.3s ease;
-}
-[data-list-item-id*="message"]:hover,
-[class*="messageListItem"]:hover,
-li[class*="messageListItem"]:hover {
-    transform: translateX(6px);
-}
-
-.guildInviteContainer__083ae {
-  width: 400px;
-  max-width: 100%;
-  display: flex;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
-  align-items: end;
-  justify-content: space-between;
-  padding: 8px;
-  gap: 8px;
-  height: calc(48px + 72px);
-
-  .cardHeightMeasure__083ae {
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    gap: 8px;
-    flex: 1 1 auto!important;
-  min-width: 0;               
-  }
-
-  .mainContent__083ae,
-  .established__6e500 {
-    display: none;
-  }
-
-  .avatarContainer_dca174 {
-    margin-top: 0px;
-    padding: 0px;
-    overflow: hidden;
-    min-width: 48px;
-
-    foreignObject {
-      mask: none !important;
-      overflow: hidden;
-      border-radius: 16px;
-    }
-
-    >svg {
-      width: 48px;
-      height: 48px;
-    }
-  }
-
-  .footer__083ae {
-    width: fit-content;
-    flex-shrink: 0 !important;
-    height: 48px;
-align-content: center;
-    .buttonContainer__083ae {
-      padding: 0px;
-      width: fit-content;
-
-      .button__201d5 {
-        width: auto;
-      }
-    }
-  }
-
-  .header__6e500 {
-    width: max-content !important;
-    padding: 0px;
-    margin: 0px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    .nameContainer__6e500, .members__6e500, .memberCount__6e500{
-      width: 100%!important;
-      flex-wrap: nowrap;
-    }
-
-    [data-text-variant] {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-
-  .banner__083ae {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    width: 100%;
-  }
-}
-
-/* Button default state - transparent background */
-.actionButton_f8fa06 {
-  background-color: rgba(46, 52, 73) !important;  /* Ensure background is transparent */
-  border: none !important;
-  box-shadow: none !important;
-  transition: background-color 0.3s, opacity 0.3s !important;  /* Smooth transition */
-}
-
-/* Button hover state - transparent with slight opacity */
-.actionButton_f8fa06:hover {
-  background-color: rgb(54, 59, 77) !important;  /* Light background on hover */
-  opacity: 0.7 !important; /* Slightly reduced opacity */
-}
-
-
-[class^="headerText"] {
-  display: inline-flex;
-}
-
-[class^="headerText"] > span:has([class^="roleIcon"]) {
-  order: 2;
-}
-
-[class^="headerText"] > span:has([class^="chipletContainerInner"])  {
-  order: 3;
-}
-
-[class^="headerText"] > span:is([class^="username"]) {
-  order: 1;
-}
-
-[class^="headerText"] > span[style="display: none;"] {
-  order: 4;
-}
-
-[class^="headerText"] > .vc-message-decorations-wrapper {
-  order: 5;
-}
-
-[class^="headerText"] > span:has(> [class^="newMemberBadge"]) {
-  order: 6;
-}
-
-[class^="headerText"] > span:is([class^="botTag"]) {
-  order: 7;
-}
-
-[class*=clanTag]>span>span {
-  max-width: 4em;
-  display: -webkit-inline-box;
-  -webkit-line-clamp: 1;
-  overflow: hidden;
-}
 
 #vc-spotify-player {
     --blur-amount: 4px; 
@@ -428,140 +74,36 @@ align-content: center;
     backdrop-filter: blur(10px) saturate(4) brightness(1.6);
 }
 
-
-
-
-
-/* MATERIAL YOU DARK THEME SETTINGS */
-.theme-dark {
-	--saturation-modifier: 0.31;
-	--lightness-modifier: 0.225;
-	--text-lightness-modifier: 1.0;
-	--ui-darkness-modifier: 1.0;
+[class^="headerText"] {
+  display: inline-flex;
 }
 
-/* MATERIAL YOU LIGHT THEME SETTINGS */
-.theme-light {
-	--saturation-modifier: 0.74;
-	--lightness-modifier: 2.125;
-	--text-lightness-modifier: 1.0;
+[class^="headerText"] > span:has([class^="roleIcon"]) {
+  order: 2;
 }
 
-:root {
-	/* ACCENT HSL AND TEXT COLOR SETTINGS */
-	--accent-hue: 227;
-	--accent-saturation: 71%;
-	--accent-lightness: 61%;
-	--accent-text-color: hsl(0,0%,100%); /* DOES NOTHING WITH MATERIAL YOU ENABLED */
-	--accent-button-action: hsl(0,0%,100%);
-
-	/* ALERT HSL AND TEXT COLOR SETTINGS */
-	--alert-hue: 0;
-	--alert-saturation: 85%;
-	--alert-lightness: 61%;
-	--alert-text-color: hsl(0,0%,100%); /* DOES NOTHING WITH MATERIAL YOU ENABLED */
-
-	/* WARNING HSL AND TEXT COLOR SETTINGS*/
-	--warning-hue: 40;
-	--warning-saturation: 86.4%;
-	--warning-lightness: 56.9%;
-	--warning-text-color: hsl(0,0%,100%); /* DOES NOTHING WITH MATERIAL YOU ENABLED */
-
-	/* MESSAGE SETTINGS */
-	--message-radius: 18px;
-	--message-padding-top: 8px;
-	--message-padding-side: 12px;
-
-	/* MESSAGE MEDIA SETTINGS */
-	--media-radius: 10px;
-
-	/* CARD SETTINGS */
-	--card-radius: 8px;
-	--card-radius-big: 18px;
-
-	/* BUTTON SETTINGS */
-	--button-height: 36px;
-	--button-padding: 0 24px;
-	--button-action-color: hsl(0,0%,100%);
-
-	/* INPUT SETTINGS */
-	--input-height: 36px;
-	--input-padding: 0 12px;
-
-	/* POPOUT AND MODAL SETTINGS */
-	--popout-radius: 8px;
-	--popout-radius-big: 18px;
-
-	/* TOOLTIP SETTINGS */
-	--tooltip-color: hsl(0,0%,38%,0.9);
-	--tooltip-text-color: hsl(0,0%,87%);
-	--tooltip-font-size: 12px;
-	--tooltip-padding: 8px;
-	--tooltip-radius: 8px;
-
-	/* SCROLLBAR SETTINGS */
-	--scrollbar-width: 10px;
-	--scrollbar-thin-width: 6px;
+[class^="headerText"] > span:has([class^="chipletContainerInner"])  {
+  order: 3;
 }
 
-.vc-smyn-suffix {
-    font-size: 0;
-    line-height: 0rem;
+[class^="headerText"] > span:is([class^="username"]) {
+  order: 1;
 }
 
-.username_c19a55:has(.vc-smyn-suffix):hover {
-    font-size: 0;
-    line-height: 0rem !important;
-
-    .vc-smyn-suffix {
-        opacity: 0.8;
-        display: inline !important;
-        font-size: initial;
-        font-weight: var(--font-weight-medium);
-        line-height: 1.375rem !important;
-        color: inherit;
-
-        &::before {
-            opacity: 0.625;
-            content: "@";
-        }
-
-        &::after {
-            display: none;
-        }
-    }
+[class^="headerText"] > span[style="display: none;"] {
+  order: 4;
 }
 
-.username_c19a55:not(:has(.vc-smyn-suffix)) {
-    &::before {
-        content: "@";
-        opacity: 0.625;
-    }
+[class^="headerText"] > .vc-message-decorations-wrapper {
+  order: 5;
 }
 
-.embedFull__623de {
-    overflow: hidden;
-
-    &::before {
-        top: -1px;
-        content: "";
-        position: absolute;
-        border: inherit;
-        border-left-width: 100vw;
-        max-width: 100%;
-        height: calc(100% + 2px);
-        box-sizing: border-box !important;
-        opacity: 0.10;
-        z-index: 1;
-        border-radius: 0px 8px 8px 0px;
-    }
-
-    .gridContainer__623de {
-        z-index: 2;
-    }
+[class^="headerText"] > span:has(> [class^="newMemberBadge"]) {
+  order: 6;
 }
-.withAccentColor__60fa3 {
-    background: color-mix(in srgb, var(--background-surface-high), var(--__accent-color) 25%);
+
+[class^="headerText"] > span:is([class^="botTag"]) {
+  order: 7;
 }
 
 /* Sidebar cat */
@@ -626,4 +168,152 @@ time[datetime]:hover::after {
             }
         }
     }
+}
+
+/* hide menus next to mute and deafen buttons */
+div[class^=micButtonParent__] {
+  button[role="switch"] {
+    border-radius: var(--radius-sm) !important;
+    
+    ~ button {
+      display: none;
+    }
+  }
+}
+
+body {
+    /* font, change to '' for default discord font */
+    --font: 'figtree'; /* change to '' for default discord font */
+    --code-font: ''; /* change to '' for default discord font */
+    font-weight: 400 /* normal text font weight. DOES NOT AFFECT BOLD TEXT */;
+
+    /* sizes */
+    --gap: 8px; /* spacing between panels */
+    --divider-thickness: 2px; /* thickness of unread messages divider and highlighted message borders */
+    --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
+
+    /* animation/transition options */
+    --animations: on; /* off: disable animations/transitions, on: enable animations/transitions */
+    --list-item-transition: 0.2s ease; /* transition for list items */
+    --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
+    --border-hover-transition: 0.2s ease; /* transition for borders when hovered */
+
+    /* top bar options */
+    --top-bar-height: var(--gap); /* height of the top bar (discord default is 36px, old discord style is 24px, var(--gap) recommended if button position is set to titlebar) */
+    --top-bar-button-position: titlebar; /* off: default position, hide: hide buttons completely, serverlist: move inbox button to server list, titlebar: move inbox button to channel titlebar (will hide title) */
+    --top-bar-title-position: off; /* off: default centered position, hide: hide title completely, left: left align title (like old discord) */
+    --subtle-top-bar-title: off; /* off: default, on: hide the icon and use subtle text color (like old discord) */
+
+    /* window controls */
+    --custom-window-controls: on; /* off: default window controls, on: custom window controls */
+    --window-control-size: 14px; /* size of custom window controls */
+
+    /* dms button options */
+    --custom-dms-icon: hide; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
+    --dms-icon-svg-url: url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg'); /* icon svg url. MUST BE A SVG. */
+    --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
+    --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
+    --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
+    --custom-dms-background: image; /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
+    --dms-background-image-url: url('https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png'); /* url of the background image */
+    --dms-background-image-size: cover; /* size of the background image (css background-size property) */
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background property) */
+
+    /* background image options */
+    --background-image: off; /* off: no background image, on: enable background image (must set url variable below) */
+    --background-image-url: url(''); /* url of the background image */
+
+    /* transparency/blur options */
+    /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
+    --transparency-tweaks: off; /* off: no changes, on: remove some elements for better transparency */
+    --remove-bg-layer: off; /* off: no changes, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
+    --panel-blur: off; /* off: no changes, on: blur the background of panels */
+    --blur-amount: 12px; /* amount of blur */
+    --bg-floating: var(--bg-3); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
+
+    /* chatbar options */
+    --custom-chatbar: off; /* off: default chatbar, separated: chatbar separated from chat */
+    --chatbar-height: 47px; /* height of the chatbar (56px by default, 47px to align with user panel, 56px recommended for separated) */
+
+    /* other options */
+    --small-user-panel: on; /* off: default user panel, on: smaller user panel like in old discord */
+}
+
+/* color options */
+:root {
+    --colors: on; /* off: discord default colors, on: midnight custom colors */
+
+    /* text colors */
+    --text-0: var(--bg-3); /* text on colored elements */
+    --text-1: hsl(226, 64%, 95%); /* other normally white text */
+    --text-2: #ebeef5; /* headings and important text */
+    --text-3: #ebeef5; /* normal text */
+    --text-4: #ebeef5; /* icon buttons and channels */
+    --text-5: #585b70; /* muted channels/chats and timestamps */
+
+    /* background and dark colors */
+    --bg-1: #45475a; /* dark buttons when clicked */
+    --bg-2: #313244; /* dark buttons */
+    --bg-3: #1e2030; /* spacing, secondary elements */
+    --bg-4: #181926; /* main background color */
+    --hover: hsla(235, 15%, 53%, 0.3); /* channels and buttons when hovered */
+    --active: hsla(235, 15%, 53%, 0); /* channels and buttons when clicked or selected */
+    --active-2: hsla(235, 15%, 53%, 0.4); /* extra state for transparent buttons */
+    --message-hover: hsla(235, 0%, 0%, 0.2); /* messages when hovered */
+
+    /* accent colors */
+    --accent-1: var(--purple-1); /* links and other accent text */
+    --accent-2: var(--purple-2); /* small accent elements */
+    --accent-3: var(--purple-3); /* accent buttons */
+    --accent-4: var(--purple-4); /* accent buttons when hovered */
+    --accent-5: var(--purple-5); /* accent buttons when clicked */
+    --accent-new: var(--accent-2); /* stuff that's normally red like mute/deafen buttons */
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* background of messages that reply to you */
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
+
+    /* status indicator colors */
+    --online: var(--green-2); /* change to #43a25a for default */
+    --dnd: var(--red-2); /* change to #d83a42 for default */
+    --idle: var(--yellow-2); /* change to #ca9654 for default */
+    --streaming: var(--purple-2); /* change to #593695 for default */
+    --offline: var(--text-4); /* change to #83838b for default offline color */
+
+    /* border colors */
+    --border-light: var(--hover); /* general light border color */
+    --border: var(--active); /* general normal border color */
+    --border-hover: var(--active); /* border color of panels when hovered */
+    --button-border: hsl(235, 0%, 100%, 0.1); /* neutral border color of buttons */
+
+    /* base colors */
+    --red-1: hsl(343deg, 81%, 80%);
+    --red-2: hsl(343deg, 81%, 75%);
+    --red-3: hsl(343deg, 81%, 75%);
+    --red-4: hsl(343deg, 81%, 70%);
+    --red-5: hsl(343deg, 81%, 65%);
+
+    --green-1: hsl(115deg, 54%, 81%);
+    --green-2: hsl(115deg, 54%, 76%);
+    --green-3: hsl(115deg, 54%, 76%);
+    --green-4: hsl(115deg, 54%, 71%);
+    --green-5: hsl(115deg, 54%, 66%);
+
+    --blue-1: hsl(199deg, 76%, 74%);
+    --blue-2: hsl(199deg, 76%, 69%);
+    --blue-3: hsl(199deg, 76%, 69%);
+    --blue-4: hsl(199deg, 76%, 64%);
+    --blue-5: hsl(199deg, 76%, 59%);
+
+    --yellow-1: hsl(41deg, 86%, 88%);
+    --yellow-2: hsl(41deg, 86%, 83%);
+    --yellow-3: hsl(41deg, 86%, 83%);
+    --yellow-4: hsl(41deg, 86%, 78%);
+    --yellow-5: hsl(41deg, 86%, 73%);
+
+    --purple-1: hsl(267deg, 84%, 86%);
+    --purple-2: hsl(343deg, 81%, 70%);
+    --purple-3: hsl(267deg, 84%, 81%);
+    --purple-4: hsl(267deg, 84%, 76%);
+    --purple-5: hsl(267deg, 84%, 71%);
 }
