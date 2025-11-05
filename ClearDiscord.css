@@ -248,7 +248,7 @@ body {
     --text-1: hsl(226, 64%, 95%); /* other normally white text */
     --text-2: #ebeef5; /* headings and important text */
     --text-3: #ebeef5; /* normal text */
-    --text-4: #ebeef5; /* icon buttons and channels */
+    --text-4: #939ab7; /* icon buttons and channels */
     --text-5: #585b70; /* muted channels/chats and timestamps */
 
     /* background and dark colors */
