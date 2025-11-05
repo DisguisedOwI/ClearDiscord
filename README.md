@@ -16,4 +16,4 @@ https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight
 
 https://catppuccin.com/palette/
 
-https://discord.gg/libVencore The Vencore server
+[https://discord.gg/Vencore](https://discord.com/invite/D9uwnFnqmd) The Vencore server
