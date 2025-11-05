@@ -14,4 +14,6 @@ Based on:
 
 https://github.com/refact0r/midnight-discord/blob/master/themes/flavors/midnight-catppuccin-mocha.theme.css
 
+https://catppuccin.com/palette/
+
 https://discord.gg/libVencore The Vencore server
