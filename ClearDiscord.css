@@ -17,7 +17,7 @@
 @import url("https://raw.githubusercontent.com/CeaAPI/vencord-snippets/main/CompactSidebarButtons/CompactSidebarButtons.css");
 @import url("https://raw.githubusercontent.com/yiruzu/vencord-snippets/refs/heads/main/snippets/BubbleUsernames/import.css");
 @import url("https://raw.githubusercontent.com/Just-Me-22/Compact-Server-Shortcut-Buttons/main/compact-server-shortcuts.css");
-
+@import url('https://codeberg.org/flak/css1/raw/branch/main/vcSnippets/prettifiedAndExpandedEditedMessageTimestamp.css');
 
 .container__37e49 .panelSubtextContainer__37e49 {
     display: none;
@@ -390,4 +390,46 @@ body {
 .container__75920[data-nav-anchor-key='account_info_email_setting'],
 .container__75920[data-nav-anchor-key='account_info_phone_setting'] {
   .stack_dbd263>.text-md\/medium_cf4812 {-webkit-text-security: disc;}
+}
+
+/*Limit Modal v2 to Modal v1 Width of 600px*/
+[class^="layoutContainer"] {
+    max-width: 600px;
+}
+
+.user-profile-modal-v2 {
+    /*Disable Widgets*/
+    [id^="widgets"], [role^="tablist"] {
+        display: none;
+    }
+
+    /*Modal v1-ify Profile Content*/
+    [class*="profileContentInner"] {
+        --custom-modal-v2-padding: var(--space-0);
+        
+        [class^="profile"] {
+            width: 100%;
+            border-radius: var(--radius-lg); 
+            
+            [class*="profileHeaderBanner"] {
+                border-radius: 0 !important;
+                
+                [class^="editButton"] {
+                    inset-inline-end: var(--space-48);
+                }
+            }
+        }
+    }
+
+    /*Fix Profile Frame Scale*/
+    [class^="profileFrame"] {
+        width: 103% !important;
+    }
+}
+
+/*Remove Nitro Upsells from Modal v2*/
+#user-profile-editing-panel {
+    [class^="floatingFooter"], [class^="guildProfileUpsell"], [class^="premium"], [class^="expressiveWrapper"] {
+        display: none;
+    }
 }
