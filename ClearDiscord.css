@@ -384,3 +384,45 @@ body {
     display: flex;
     > :not([class^=parentContainer]) { display: none; }
 }
+
+/*Limit Modal v2 to Modal v1 Width of 600px*/
+[class^="layoutContainer"] {
+    max-width: 600px;
+}
+
+.user-profile-modal-v2 {
+    /*Disable Widgets*/
+    [id^="widgets"], [role^="tablist"] {
+        display: none;
+    }
+
+    /*Modal v1-ify Profile Content*/
+    [class*="profileContentInner"] {
+        --custom-modal-v2-padding: var(--space-0);
+        
+        [class^="profile"] {
+            width: 100%;
+            border-radius: var(--radius-lg); 
+            
+            [class*="profileHeaderBanner"] {
+                border-radius: 0 !important;
+                
+                [class^="editButton"] {
+                    inset-inline-end: var(--space-48);
+                }
+            }
+        }
+    }
+
+    /*Fix Profile Frame Scale*/
+    [class^="profileFrame"] {
+        width: 103% !important;
+    }
+}
+
+/*Remove Nitro Upsells from Modal v2*/
+#user-profile-editing-panel {
+    [class^="floatingFooter"], [class^="guildProfileUpsell"], [class^="premium"], [class^="expressiveWrapper"] {
+        display: none;
+    }
+}
